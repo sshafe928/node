@@ -1,0 +1,20 @@
+{
+  "name": "nodejs2",
+  "version": "1.0.0",
+  "description": "node notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon NodeJS/tutorials/09-path-module.js"
+  },
+  "keywords": [
+    "Node",
+    "Notes",
+    "Backend"
+  ],
+  "author": "Sabrina Shafer",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

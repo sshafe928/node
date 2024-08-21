@@ -1,0 +1,222 @@
+Advanced array methods
+ - manipulating data is highly important
+ - master arrays and methods and rejex
+ - pivotal for websties databaese and web appllications
+
+Mastering arrays
+    -Ternaries 
+        - like a mini if statement
+        - {conditional ? truepath : falsepath}
+    Spread operator
+        -(...) 
+        -will iterate through and add all values from an array-like object
+        -spreads the elements(methods and properties) of an array
+    Mapping arrays
+        -when you have an array with several items that you want to break down the best way is .map()
+        - .map() is an array method that will go through each items and do a thing
+        - .map() returns a whole new array when its finished
+        -other methods such as forEach() do not create new arrays and instead just paste content for the existing array
+    Anatomy of .map()
+        -the first part of a map method is a variable name that will represent each item from your array
+        - this variable name should be named as the singular or the array
+            - people -> person
+            - books -> book
+        - next you can destructure your item if you like, this is not required but makes setup easier
+            -const {name, age, job, shirtColor, drink, pet} = person;
+        -lastly you need to return the object bck to the map
+            -return {...person, shirtColor: 'tye-dye'}
+
+    .forEach()
+        -doesnt return a new array, every modification effects the origional array
+        you have 3 values to work with: value(item), index(position), array(whole)
+        - the last export for a forEach loop is undefined this really messes with return loops
+        - instead you can have a condiitonal that acts depending on the values returned
+        - if a list is missing variables they get the definition of undefined, you can deal witht hem by ->
+                -counting occurences
+                -breaking up the array into smaller arrays
+                -printing out every name that starts with an A
+
+
+    .filter()
+        -filter is how you can remove certain items from yuor array
+        it will go throuhj each item and comapre them to a conditional that you set up, true gets added and false doesnt
+
+    .(each)
+    const numbers = [-1, -2,]
+    console.log(
+        number.every((num) => num > 100)
+    )
+
+    - checks to make sure that every value meets the conditional
+    - returns a boolean
+
+    .some()
+    - similar to .every, it checks if some of them are true
+    - as long as one is true it will return true
+
+
+    .reduce
+    - a method that adds to an output it finds the accumulation of numbers
+    - this does nothing for non number values, this is very use ful for creating updates numbers of items
+    - items in your cart, money raised by the class
+
+
+    const array = [2,4,6,8,10]
+    array.reduce((accumulator, currentValue,currentIndex, array) =>{
+        return accumulator + currentValue
+    }, 20)
+    accumulator refers to total
+    current value, is where it curretnyly is
+    current index is the index of the value
+    array gives yoyu the entirety of the array
+    .reduce(total, current, index,arr) =>.....
+    
+
+
+Agile Development 
+        - requirements
+        - design
+        - Development
+
+- a specific from of development and is currently the most used version across the world
+- as the name implies this is a form of development that is flexible so that it can be used for any project
+- this form of development focuses very heavily on the user expiriemce and client collaboration
+
+Individuals and Interactions
+    - instead of focusing on the project and what needs to be done you can focus on the team and how they do it
+    - if you have a happy team and they are all working together very well then the product will turn out better
+    - this also goes with the client if you have a good relationship with the customer the project has a better chance for success
+
+
+Working software
+    - while testing and creating your project you should make it available to everyone
+    - many older companies would spend their time cresting rendered images of the sote and typing up instrauctions on how to use the site
+    - you should instead have it up so that people can see and use it while push out consisent updates.
+
+Customer collaboration
+    - by keeping constant communication with the client and customers you can ensure that you are creating what they want ot recieve and what will be best for the users
+    - this will also avoid large changes or unfortunate miscommunications at the end of the project
+
+Responding to changes
+    - unlike other forms of desing, agile is based around the idea that at any point the entire project and scope can changes
+    - peoples needs, modern design, software and the team you are working with change constantly and your project needs ot be able to change with that\
+
+
+Agile principles
+    1. your highest priority is to satisfy the customer throught early and continuous dlivery of valuable software
+    2. welcome changing requirements even late in development. Agile processes harness change for the customer's competitive advantage
+    3. Deliver working software frequenbtly from a couple of weeks to a couple of month and as needed.
+    4. business people and developers must work together dailt throughout the project
+    5. build projects around motivated individuals. give them the enviornment and support they need, and trust them to get the job done.
+    6.The most efficient and effective method od conveying information to and within a development team is face-to-face conversation
+    7. working software is the primary measure of progress
+    8. agile processes promote sustainable development. The sopnsors dvelopers,adn users should be able to maintain a constant pace indefinitly
+    9. continuous attention to technical ecellence and good design enhances agility.
+
+
+1. Intro to Node js
+
+    - node is an enviornment that allows us to run JS outside of the browser
+    - built using chrom's V8 JS engine
+    - node has a large and great community that is adding to the libraries available
+
+
+differences from browser to node
+
+    - there is no DOM
+    - there is no window object to reference
+    - this runs server side appllications
+    - great for filesystem
+    - they use commonJS so we dont need to worry about ES6 or browser compatability
+
+    Installing NODEJS
+
+    -    node is already installed on these computers
+    -   if you are going to install this on your own computer you should use LTS. this is becasue it is the stable build w3hat will be updated when needed
+
+    REPL& CLI
+    
+        - REPL(read eval print loop) - is a terminal command that lets us use node
+        CLI(Command LIne Interface) - is the better way that we can use node
+
+
+        Starting REPL
+         - REPL i slike having a small IDE in your terminal you can create variables and call then in the terminal but this is very inefficient and just for playing around
+         - to exit repl press ctrl + c
+
+         CLI 
+         - this is the version that runs js files and complies them for the terminal
+         - if you type in 'node filename.js' the file will be compiled and run without the need for a browser engine
+
+         clear - clears terminal
+         Cd- change directory
+
+         PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes> cd Distro 
+         -- gets yuo into Distro
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes\Distro> cd ../
+         -- gets you out of the Distro folder
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes> cd Distro/Test
+         -- gets you into test in the distro folder
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes\Distro\Test> 
+
+
+        systeminfo - shows you all info about the computerand stuff
+
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes\Distro\Test> ping "www.freecodecamp.org"
+        -- requesting information from the website or ip address, gives you the ip address and statistics or stuff like that
+
+        mkdir - makes  a directory or folder
+
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes\Distro\Test> echo My name is Sabrina Shafer > note.txt -- makes a txt file with my name is sab in it
+        make any file you want
+
+        PS C:\Users\sshafe928\Documents\GitHub\Year-2-notes\Distro\Test> del note.txt --- delets note.txt
+
+    globals
+        -just like JS there are several global variables that we are able to use anywhere
+        -for instance 'console' we dont need to define this, node already n=knows
+        -we call these Globals
+
+        a few globals:
+
+        __dirname 
+                - path to current directory
+        __filename
+                - the current file name
+        require
+                - alows us to use modules
+        module
+                - info about the current module
+        process
+                - info about the env where the program is being executed
+
+    modules
+        -modules are Node's way of saying files, EVERY . JS FILE IS A module
+        - we can use these in ES6 but we use the import Command
+        node uses 'require' instead of import 
+
+
+    OS module
+        - the os module is used to return information on the computer and system information on the PC 
+            -const os = require('os')
+
+    Path module
+     - the path module is used for a navigating the directions and fie paths
+      - this also includes mehtods that will clean up paths to avioud errors
+        - const path = require('paths')
+
+
+rs and enter restarts nodemon when it doenst notice a change
+
+
+FS module (files system)
+
+    -the file system module is extensive and allows interaction between your code and the files on the PC
+    - this has methods to allow reading, writing, cleaning, and combining files (and so much more)
+    - becasue it is so extensive we only import what we need
+        -   const{ readFileSync, writeFileSync} = require('fs')
+
+HTTP module
+    - http is all about servers and internet protocol
+    - this library truncates a lot of difficult code into simpiler methods and never buffers requests or response, allowing users to stream data
+        -   const http = require('http')
