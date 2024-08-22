@@ -220,3 +220,75 @@ HTTP module
     - http is all about servers and internet protocol
     - this library truncates a lot of difficult code into simpiler methods and never buffers requests or response, allowing users to stream data
         -   const http = require('http')
+
+    async - allows for multiple processes at once 
+    sync needs to complete its process before the other code continues
+
+
+    flags:
+            'a': Open file for appending. The file is created if it does not exist.
+
+            'ax': Like 'a' but fails if the path exists.
+
+            'a+': Open file for reading and appending. The file is created if it does not exist.
+
+            'ax+': Like 'a+' but fails if the path exists.
+
+            'as': Open file for appending in synchronous mode. The file is created if it does not exist.
+
+            'as+': Open file for reading and appending in synchronous mode. The file is created if it does not exist.
+
+            'r': Open file for reading. An exception occurs if the file does not exist.
+
+            'rs': Open file for reading in synchronous mode. An exception occurs if the file does not exist.
+
+            'r+': Open file for reading and writing. An exception occurs if the file does not exist.
+
+            'rs+': Open file for reading and writing in synchronous mode. Instructs the operating system to bypass the local file system cache.
+
+            This is primarily useful for opening files on NFS mounts as it allows skipping the potentially stale local cache. It has a very real impact on I/O performance so using this flag is not recommended unless it is needed.
+
+            This doesn't turn fs.open() or fsPromises.open() into a synchronous blocking call. If synchronous operation is desired, something like fs.openSync() should be used.
+
+            'w': Open file for writing. The file is created (if it does not exist) or truncated (if it exists).
+
+            'wx': Like 'w' but fails if the path exists.
+
+            'w+': Open file for reading and writing. The file is created (if it does not exist) or truncated (if it exists).
+
+            'wx+': Like 'w+' but fails if the path exists.
+
+
+
+Nodemon 
+    - nodemon is a dev dependency that we use to help with node server development
+    - if you ever uodate any files on a server than you need to stop and resart the server to load those settings
+    - nodemon lets us do it automatically
+
+Dev dependencies
+    -   nodemon is a library that is not needed for the end user so loading it on the server would waste space for no reason
+    - dependencies only used for creating an application is a dev dependency
+    - to install dependencies into the dev only space we use dev dependencies
+        -npm i nodemon -d
+
+    NPM scripts
+        - if you look into your package.json you will also see a scripts object
+        - we have been using this in react without even knowing it you may recognize the commands lsted
+            -"start" : "react-scripts start"
+            -"build" : "CI= react-scripts build"
+            -"test": "react-scripts test"
+            -"eject": "react-scripts eject"
+
+    custon scripts
+        -react builds default scripts that we have been using but you are able to define your own scripts
+        - lets make one for nodemon
+    
+    Asynchronous vs synchronous 
+        - Asynchronous is a non-blocking architecture, so the exectuion of one task isnt dependant on another. Tasks can run simultaniously.
+        =Synchrounous is a blocking architecture so the execution of each operation depends on completting the one before it. each task requires
+         an answer before moving on to the next iteration
+
+        event loop
+
+            - the event loop is a key part of how the browser works with async functions and callbacks
+            - its very hard to explain all this but some guy named philip roberts does a great job
