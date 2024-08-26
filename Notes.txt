@@ -292,3 +292,43 @@ Dev dependencies
 
             - the event loop is a key part of how the browser works with async functions and callbacks
             - its very hard to explain all this but some guy named philip roberts does a great job
+
+
+
+What are the 2 stacks inside of the javascript run time?
+
+
+
+What does it mean when you say “javascript is a single threaded programming language”?
+
+
+
+Since js is a single threaded programming language what handles the async functions?
+
+
+
+Describe blocking in your own words.
+
+
+
+List 1 asynchronous callback
+
+
+
+Describe what the event loop does in your own words
+
+
+
+What is the task queue?
+
+
+
+When does the event loop trigger to pull the next item from the task queue?
+
+
+
+Rank the following in highest to lowest priority relative to the event loop
+Render Queue
+Call Stack
+Callback Queue
+
