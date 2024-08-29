@@ -294,41 +294,61 @@ Dev dependencies
             - its very hard to explain all this but some guy named philip roberts does a great job
 
 
+Hypertext Transfer protocol
+    -   http is how we send information from a browser od url to a server
+    -   http is typical way that users ask for information from a server and that is called a requesting
 
-What are the 2 stacks inside of the javascript run time?
-
-
-
-What does it mean when you say “javascript is a single threaded programming language”?
-
-
-
-Since js is a single threaded programming language what handles the async functions?
+http module
+    -   node is excellent at server setup and request handelling, this is done through http module
+    -   here we have methods like http.createServer() that allows us to easily create a new server
 
 
+createServer
 
-Describe blocking in your own words.
+    -   http.createServer() takes in a call back function with 2 parameters, 1 for requests and 1 for responce
 
-
-
-List 1 asynchronous callback
-
+    const server = http.createServer((req,res)=> {})
 
 
-Describe what the event loop does in your own words
+    Req and Responding
+
+    -   req is an object that represents the http request, typically done throught the url but also through things like fetch()
+    - res is the responce, or what the server retunrs to the user
 
 
+The request object
 
-What is the task queue?
+    -   there is a lot of information stored in the request object, including url, header, and parameters
+    -    we are going to start with the url to get the location of the pae we are querying
 
+    - if (req.url === "/") {}
 
+The response object 
 
-When does the event loop trigger to pull the next item from the task queue?
+    -   the reponse object has a ton of information as well, including formst, json, and download
+    -    we are going to focus on the required one called .end that ends the responce process
 
+    res.end('welcome to our home page')
+    else {res.status(404).end(); }
 
+Promises
 
-Rank the following in highest to lowest priority relative to the event loop
-Render Queue
-Call Stack
-Callback Queue
+- Promises are special object that holds information about the values recieved but also whether or not the operation is finished
+-Like chained anonomous functions, they 
+- promises are asynchronous so we can use them to run the code and then we can force the rest of the code to wait on the promise
+- You can create multiple promises, the first result from the first promise will automatically be given to the next promise.
 
+-Async / Await are a way that we can use promises
+
+- await is a keyword telling us that we need to wait for the promise to finish and return information
+
+not everything has a promise on it, fetch statements is a promise by default but things like large math problems are not promises
+promises are objects so we set them up like any other object
+
+const getText = (path) => {
+    return new Promise((resolve, reject) => {})
+}
+
+Promises have always been very important for JS and other languages
+
+- we are going to see 3 ways to handle promises but please only use async / await in the future
