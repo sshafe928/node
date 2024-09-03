@@ -351,4 +351,31 @@ const getText = (path) => {
 
 Promises have always been very important for JS and other languages
 
-- we are going to see 3 ways to handle promises but please only use async / await in the future
+- we are going to see 3 ways to handle promises but please only use async / await in the future\
+
+
+
+Events
+
+- events are triggered by the user input, just like js or html events like onClick()
+- node usues events very often building modules that handles changes on the page
+- in node events are built off of a singular module called the event emitter
+- this module takes in some kind of request and gives back something depending on the parameters
+- the common events are requests and we use a method called .on for that
+- any other module that extends events is also available to use the .on for example the http servers
+
+File system flags
+- when creating files sequentially we need to tell node how we want the data exported, i.e. overwrite, append, create, only if it doesnt exist 
+common flags include, w, r, and a
+
+
+Streams
+
+- you have likley heard of streaming tv
+- streams in NodeJS enabling efficeint data handeling by reading or writing inout and output sequentially
+- we only load 64 kbps of information at a time so that we can enjoy the loaded part while the rest is loading
+- just like fs option with flGS, there are options with streaming as well. two highly use options are:
+- highWaterMark
+    -   tells the stream how many bytes ahould be in each chunk
+-encoding
+    -   defines the language, utf8 for example
