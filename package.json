@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon NodeJS/tutorials/15-create-big-file.js"
+    "start": "nodemon NodeJS/tutorials/16-streams.js"
   },
   "keywords": [
     "Node",
