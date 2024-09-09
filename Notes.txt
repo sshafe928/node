@@ -379,3 +379,68 @@ Streams
     -   tells the stream how many bytes ahould be in each chunk
 -encoding
     -   defines the language, utf8 for example
+
+
+servers
+    servers are computers, i know they sound more advanced and technical, but they are a computer just like your laop top
+    the only difference is that a server is meant to stay on and alwyas have the resources they are carrying available
+
+http request cycle
+
+-urls are an address to the server where the inform,ation is stored
+-think of it like a house and you need to send a letter to ask for something, you cant do that withiut knowing the address
+-the url holds a lot of information, where to go and what to ask for
+-the server waits for this http request and then http responds with the corresponding data if available
+
+
+a reponce has 4 parts:
+    -a method
+        -GET(reads Data) PUT(updates data) POST(creates data) DELETE(deletes data)
+    -a url 
+        -the address
+    -headers
+        -the options that your request carries
+    -body
+        -any other releveant informaiton needed
+
+Headers (optional)
+
+    -headers is an obkect that is filled with key value pairs describing the request
+    -for ex:
+        -CORS: no-CORS
+        -Referrer: google.com
+        -Pragma: no-cache
+
+Body or Payload
+    -this is the content that you are depositing on to the server if you are running a PUT or POST request
+    -this is totally optional and the users cant do this with a url request
+    
+
+Status codes:
+    -200, 404 -- tells the user the status
+
+Status text:
+    -describes the code, OK or Page not found
+
+Headers:
+    -details about the data and server
+
+body:
+    -the content they want, html json....
+
+
+
+Server status code:
+    -100's (informaiton)
+        -this si a preliminary responce, typcallly used to let the client know that thier request was recieved and to wait
+
+    -200's (success)
+        -this is a success, there are a lot of codes in the 20 but all of them anre just different sucesses
+
+    -300's(redirect)
+        -these are a redirection, this is typically placed in the console for thr dev to handle deprications
+    -400's (client errors)
+        -this is used when the error seems to be caused by the cloent and not the server
+
+    -500's (server error)
+        -these are reserved for when somethng goes wrong in the server's code, infinite loops, missing methids..
