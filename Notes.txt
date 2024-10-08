@@ -202,7 +202,7 @@ differences from browser to node
 
     Path module
      - the path module is used for a navigating the directions and fie paths
-      - this also includes mehtods that will clean up paths to avioud errors
+      - this also includes mehtods that will clean up paths to aviod errors
         - const path = require('paths')
 
 
@@ -262,7 +262,7 @@ HTTP module
 
 Nodemon 
     - nodemon is a dev dependency that we use to help with node server development
-    - if you ever uodate any files on a server than you need to stop and resart the server to load those settings
+    - if you ever update any files on a server than you need to stop and resart the server to load those settings
     - nodemon lets us do it automatically
 
 Dev dependencies
