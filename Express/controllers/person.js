@@ -5,13 +5,13 @@ const readPeople = (req,res) =>{
 }
 
 //post function for create people
-let lenght = people.lenght +1
-const createPeople = (res,res)=>{
+let length = people.length +1
+const createPeople = (req,res)=>{
     const {name,id} = req.body
     if(!name){
         return res.status(404).json({success:false, msg:'name is required'})
     }
-    let people = {id: length++, name: name}
+    let person = {id: length++, name: name}
     people.push(person)
     res.status(201).json({success:true, data:[person]})
 }
