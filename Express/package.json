@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon 08-middleware-methods.js"
+    "dev": "nodemon 09-router-app.js"
   },
   "author": "",
   "license": "ISC",

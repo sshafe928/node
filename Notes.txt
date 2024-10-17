@@ -464,3 +464,52 @@ Express:
 
     - in order to use express you need to install it using npm i express
     -then you need to require it
+
+Methd POST
+    - post is a method that allows us to create new data that data is passed through the body of the request
+    - this is extremly similar to get with a req and a res, it is even able to retrun an html
+
+express.urlencoded
+    - information passed through the bpdy of a request is a bit confusing for the server
+    - data must be parsed by content type sometimes that isnt clearly defined
+    - express has released its own version of  body-parser called url encpded
+    - this middleware will take the req.body and decoded the values to be strings or arrays (doesnt recognize objets)
+
+express.json 
+    - this is the complimentary middleware to urlencoded that will recognize objects
+    - this will also parse the data into a JSOn for easy use in the response
+
+urlencoded() and json()
+    - these two middlewares are required for put and post methods since data is always passed to the server as encoded information
+
+PUT method
+    -   put is used to update existing values
+    - put methods require 2 parameters what you want to change and what it will be changed to
+
+DELETE method  
+    - delete removes a value from your data
+    - all we need is a param to let us know which object we want to remove from the database
+
+Express Router
+    - express router is used to reduce the amount of routes that you need to type into your main server file
+    - you instead create your routes  with your multiple methods in one file and then use app.use that router file 
+
+express.Router()
+    - instead of creatinf an app we can create a router int he same way allowing us to create the pathing in a different file
+    - const router = express.Router()
+
+router.method()
+    - when using router you create them just like the app using the .methods(path, CB)
+    - router.get("/", (req,res) =>)
+
+using a router
+    - once you have created your routes you need to export it frro the router to import it to the server file
+    - then you app.use the route with the path
+    - app.use('/api/people', people)
+
+
+controllers
+    - controllers are created to deal with functions and are then passed to the router
+    - this is the final step in creating clean easy to navigate code for a server
+    - since the controllers will handle the req, res callback function we can now nicely arrange our routes into easy to read methods
+    
